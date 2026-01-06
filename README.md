@@ -1,10 +1,10 @@
-# 📝 Gerenciador de Tarefas (Console)
+# Gerenciador de Tarefas (Console)
 
 Este é um projeto de estudo focado em **Lógica de Programação** e **Estrutura de Dados**, implementado em duas linguagens diferentes para fins de comparação: **Java** e **Kotlin**.
 
 O objetivo foi criar uma aplicação via terminal (CLI) para gerenciar uma lista de tarefas simples, praticando conceitos fundamentais de desenvolvimento de software.
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 * **Menu Interativo:** Navegação simples via console.
 * **Adicionar Tarefa:** Entrada de dados pelo usuário.
@@ -12,13 +12,13 @@ O objetivo foi criar uma aplicação via terminal (CLI) para gerenciar uma lista
 * **Remover Tarefa:** Remoção segura de itens da lista.
 * **Validação:** Tratamento básico de erros (ex: impedir que o programa feche se o usuário digitar letras onde deveria ser número).
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 * **Java** (Uso de `ArrayList`, `Scanner`, `Switch Case`)
 * **Kotlin** (Uso de `MutableList`, `Interpolation`, `When`)
 * **IDE:** (IntelliJ)
 
-## 🧠 Aprendizados e Desafios
+## Aprendizados e Desafios
 
 Durante o desenvolvimento deste projeto, pude fixar conceitos importantes:
 
@@ -29,7 +29,7 @@ Durante o desenvolvimento deste projeto, pude fixar conceitos importantes:
     * Manipulação de listas (`ArrayList` vs `mutableListOf`).
 3.  **Tratamento de Exceções:** Implementação de lógica para garantir que entradas inválidas não parem a execução do programa.
 
-## 📂 Como Executar
+## Como Executar
 
 Basta clonar este repositório e abrir os arquivos em qualquer IDE compatível com Java/Kotlin.
 
