@@ -1,7 +1,9 @@
+package src;
+
 import java.util.ArrayList; // importa a ferramenta para criar listas
 import java.util.Scanner;   // importa a ferramenta para ler os dados do teclado
 
-public class Main {
+public class GerenciadorTarefas {
 
     public static void main(String[] args) {
         // cria uma lista para armazenar as tarefas, no caso as Strings.
@@ -14,7 +16,7 @@ public class Main {
 
         // Loop que vai manter o programa rodando enquanto a opção não for 4 (Sair)
         while (escolhaUsuario != 4) {
-            System.out.println("\n--- MENU DE TAREFAS ---");
+            System.out.println("\n--- MENU DE TAREFAS (Java) ---");
             System.out.println("1. Adicionar Tarefa");
             System.out.println("2. Listar Tarefas");
             System.out.println("3. Remover Tarefa");
