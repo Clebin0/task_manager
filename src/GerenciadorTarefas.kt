@@ -1,80 +1,79 @@
-package src
+import java.util.Scanner
 
-import java.util.Scanner // O Kotlin usa muitas ferramentas do Java
+// --- AQUI ESTÁ A EVOLUÇÃO (POO) ---
+// Criamos um "molde" (data class) para as tarefas.
+// Agora cada tarefa é um Objeto que tem nome E status (concluída ou não).
+data class Tarefa(val nome: String, var concluida: Boolean = false)
 
 fun main() {
-    // Em Kotlin, usamos 'val' para coisas que não mudam e 'var' para o que muda.
-    // mutableListOf é uma lista que podemos alterar (adicionar/remover)
-    val listaDeTarefas = mutableListOf<String>()
+    // A lista agora guarda OBJETOS do tipo 'Tarefa', e não mais textos soltos.
+    val listaDeTarefas = mutableListOf<Tarefa>()
     
     val scanner = Scanner(System.`in`)
-    var escolhaUsuario = 0 // Olha a variável renomeada aqui!
+    var escolhaUsuario = 0
 
-    // O while funciona igual ao Java
     while (escolhaUsuario != 4) {
-        println("\n--- MENU DE TAREFAS (KOTLIN) ---")
+        println("\n--- TAREFAS 2.0 (Kotlin POO) ---")
         println("1. Adicionar Tarefa")
         println("2. Listar Tarefas")
-        println("3. Remover Tarefa")
+        println("3. Concluir Tarefa (Novo!)") 
         println("4. Sair")
         print("Escolha uma opção: ")
 
-        // Validação de entrada
         if (scanner.hasNextInt()) {
             escolhaUsuario = scanner.nextInt()
-            scanner.nextLine() // Limpar buffer
+            scanner.nextLine() // Limpa o "Enter" que sobra na memória
         } else {
             println("Por favor, digite um número válido.")
             scanner.next()
             continue
         }
 
-        // No lugar do 'switch', o Kotlin usa o 'when', que é muito mais poderoso
         when (escolhaUsuario) {
             1 -> {
-                print("Digite a descrição da tarefa: ")
-                val novaTarefa = scanner.nextLine()
+                print("Nome da tarefa: ")
+                val nomeDigitado = scanner.nextLine()
+                
+                // CRIA O OBJETO: Aqui nasce a instância da classe Tarefa
+                val novaTarefa = Tarefa(nome = nomeDigitado)
                 listaDeTarefas.add(novaTarefa)
-                println("Tarefa adicionada!")
+                println("Tarefa criada com sucesso!")
             }
             2 -> {
-                println("\n--- LISTA ---")
+                println("\n--- SUAS TAREFAS ---")
                 if (listaDeTarefas.isEmpty()) {
-                    println("Nenhuma tarefa cadastrada.")
+                    println("A lista está vazia.")
                 } else {
-                    // O 'forEachIndexed' percorre a lista e já te dá o índice (i) e a tarefa
+                    // Loop inteligente que desenha a caixinha [x] ou [ ]
                     listaDeTarefas.forEachIndexed { index, tarefa ->
-                        println("${index + 1}. $tarefa")
+                        val check = if (tarefa.concluida) "[x]" else "[ ]"
+                        println("${index + 1}. $check ${tarefa.nome}")
                     }
                 }
             }
             3 -> {
-                println("\n--- REMOVER ---")
-                if (listaDeTarefas.isEmpty()) {
-                    println("Lista vazia.")
-                } else {
-                    // Mostra a lista novamente
-                    listaDeTarefas.forEachIndexed { index, tarefa ->
-                        println("${index + 1}. $tarefa")
-                    }
+                println("\n--- MARCAR COMO FEITA ---")
+                // Mostra a lista para o usuário saber o número
+                listaDeTarefas.forEachIndexed { i, t -> 
+                    val check = if (t.concluida) "[x]" else "[ ]"
+                    println("${i + 1}. $check ${t.nome}") 
+                }
+                
+                print("Digite o número da tarefa para concluir: ")
+                if (scanner.hasNextInt()) {
+                    val indice = scanner.nextInt()
                     
-                    print("Digite o número para remover: ")
-                    if (scanner.hasNextInt()) {
-                        val indiceParaRemover = scanner.nextInt()
-                        
-                        if (indiceParaRemover > 0 && indiceParaRemover <= listaDeTarefas.size) {
-                            val removida = listaDeTarefas.removeAt(indiceParaRemover - 1)
-                            println("Tarefa '$removida' removida!")
-                        } else {
-                            println("Número inválido.")
-                        }
+                    if (indice > 0 && indice <= listaDeTarefas.size) {
+                        // Acessa o objeto específico na memória e muda o boolean dele
+                        val tarefaAlvo = listaDeTarefas[indice - 1]
+                        tarefaAlvo.concluida = true
+                        println("Parabéns! Tarefa '${tarefaAlvo.nome}' concluída!")
                     } else {
-                        println("Entrada inválida.")
-                        scanner.next()
+                        println("Número inválido.")
                     }
                 }
             }
-            4 -> println("Saindo... Até mais!") // Se for só uma linha, nem precisa de chaves {}
+            4 -> println("Saindo... Até mais!")
             else -> println("Opção inválida.")
         }
     }
