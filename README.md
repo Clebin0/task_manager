@@ -1,43 +1,29 @@
-# Gerenciador de Tarefas (Console)
+# Gerenciador de Tarefas (Task Manager)
 
-Este é um projeto de estudo focado em **Lógica de Programação** e **Estrutura de Dados**, implementado em duas linguagens diferentes para fins de comparação: **Java** e **Kotlin**.
+> Um sistema de gerenciamento de tarefas robusto desenvolvido em **Kotlin**, focado na aplicação de conceitos de Engenharia de Software, Orientação a Objetos e Persistência de Dados.
 
-O objetivo foi criar uma aplicação via terminal (CLI) para gerenciar uma lista de tarefas simples, praticando conceitos fundamentais de desenvolvimento de software.
+## Sobre o Projeto
+Este projeto foi desenvolvido para consolidar conhecimentos em lógica de backend. Ele vai além de um simples "To-Do List", implementando uma arquitetura baseada em classes e um sistema próprio de banco de dados em arquivo (File System).
 
-## Funcionalidades
-
-* **Menu Interativo:** Navegação simples via console.
-* **Adicionar Tarefa:** Entrada de dados pelo usuário.
-* **Listar Tarefas:** Exibição dinâmica da lista com indexação.
-* **Remover Tarefa:** Remoção segura de itens da lista.
-* **Validação:** Tratamento básico de erros (ex: impedir que o programa feche se o usuário digitar letras onde deveria ser número).
+**Principais Funcionalidades:**
+* ✅ **CRUD Completo:** Criar, Ler e Atualizar status de tarefas.
+* 💾 **Persistência de Dados:** O sistema salva as tarefas automaticamente em um arquivo local (`banco_de_tarefas.txt`), garantindo que os dados não sejam perdidos ao fechar o programa.
+* 🏗️ **Orientação a Objetos:** Uso de `data class` para modelagem de dados e encapsulamento.
+* 🖥️ **Interface via Console:** Interação limpa e robusta via terminal.
 
 ## Tecnologias Utilizadas
+* **Linguagem:** Kotlin (JVM)
+* **IDE:** IntelliJ IDEA
+* **Conceitos:** OOP (Object Oriented Programming), File I/O, Lógica de Dados.
+* **Versionamento:** Git & GitHub
 
-* **Java** (Uso de `ArrayList`, `Scanner`, `Switch Case`)
-* **Kotlin** (Uso de `MutableList`, `Interpolation`, `When`)
-* **IDE:** (IntelliJ)
-
-## Aprendizados e Desafios
-
-Durante o desenvolvimento deste projeto, pude fixar conceitos importantes:
-
-1.  **O "Bug" do Scanner no Java:** Entendi que após ler um número (`nextInt`), é necessário consumir a quebra de linha com um `nextLine()` extra, caso contrário a próxima leitura de texto é ignorada.
-2.  **Java vs Kotlin:**
-    * Percebi como o Kotlin reduz a verbosidade (menos código para fazer a mesma coisa).
-    * Comparação prática entre `switch` (Java) e `when` (Kotlin).
-    * Manipulação de listas (`ArrayList` vs `mutableListOf`).
-3.  **Tratamento de Exceções:** Implementação de lógica para garantir que entradas inválidas não parem a execução do programa.
-
-## Como Executar
-
-Basta clonar este repositório e abrir os arquivos em qualquer IDE compatível com Java/Kotlin.
-
-**Versão Java:**
-Execute a classe `src.GerenciadorTarefas.java`.
-
-**Versão Kotlin:**
-Execute o arquivo `src.GerenciadorTarefas.kt`.
+## Como Rodar o Projeto
+1.  Clone este repositório.
+2.  Abra o projeto no **IntelliJ IDEA**.
+3.  Aguarde a indexação do Kotlin.
+4.  Execute o arquivo `src/GerenciadorTarefas.kt`.
+5.  O banco de dados será criado automaticamente na primeira execução.
 
 ---
-*Desenvolvido por Cledson Santos durante os estudos.*
+Desenvolvido por **[Cledson Silva](https://www.linkedin.com/in/cledson-silva)** 🚀
+_Focado em Backend Development (Java/Kotlin)_
