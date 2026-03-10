@@ -1,7 +1,5 @@
 # Gerenciador de Tarefas (Task Manager)
 
-> Um sistema de gerenciamento de tarefas robusto desenvolvido em **Kotlin**, focado na aplicação de conceitos de Engenharia de Software, Orientação a Objetos e Persistência de Dados.
-
 ## Sobre o Projeto
 Este projeto foi desenvolvido para consolidar conhecimentos em lógica de backend. Ele vai além de um simples "To-Do List", implementando uma arquitetura baseada em classes e um sistema próprio de banco de dados em arquivo (File System).
 
