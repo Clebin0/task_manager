@@ -1,27 +1,51 @@
-# Gerenciador de Tarefas (Task Manager)
+<div align="center">
 
-## Sobre o Projeto
-Este projeto foi desenvolvido para consolidar conhecimentos em lógica de backend. Ele vai além de um simples "To-Do List", implementando uma arquitetura baseada em classes e um sistema próprio de banco de dados em arquivo (File System).
+# Task Manager
 
-**Principais Funcionalidades:**
-* ✅ **CRUD Completo:** Criar, Ler e Atualizar status de tarefas.
-* 💾 **Persistência de Dados:** O sistema salva as tarefas automaticamente em um arquivo local (`banco_de_tarefas.txt`), garantindo que os dados não sejam perdidos ao fechar o programa.
-* 🏗️ **Orientação a Objetos:** Uso de `data class` para modelagem de dados e encapsulamento.
-* 🖥️ **Interface via Console:** Interação limpa e robusta via terminal.
+**Kotlin · OOP · CRUD · Persistência local**
 
-## Tecnologias Utilizadas
-* **Linguagem:** Kotlin (JVM)
-* **IDE:** IntelliJ IDEA
-* **Conceitos:** OOP (Object Oriented Programming), File I/O, Lógica de Dados.
-* **Versionamento:** Git & GitHub
+<img src="https://img.shields.io/badge/Kotlin-000000?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin" />
+<img src="https://img.shields.io/badge/JVM-000000?style=for-the-badge&logo=openjdk&logoColor=white" alt="JVM" />
 
-## Como Rodar o Projeto
-1.  Clone este repositório.
-2.  Abra o projeto no **IntelliJ IDEA**.
-3.  Aguarde a indexação do Kotlin.
-4.  Execute o arquivo `src/GerenciadorTarefas.kt`.
-5.  O banco de dados será criado automaticamente na primeira execução.
+</div>
 
 ---
-Desenvolvido por **[Cledson Silva](https://www.linkedin.com/in/cledson-silva)** 🚀
-_Focado em Backend Development (Java/Kotlin)_
+
+Projeto de estudo em Kotlin criado para consolidar fundamentos de backend, orientação a objetos e persistência de dados.
+
+## Funcionalidades
+
+- criação de tarefas;
+- listagem de registros;
+- atualização de status;
+- persistência local;
+- validação de entradas;
+- interface por terminal.
+
+## Conceitos praticados
+
+- classes e data classes;
+- encapsulamento;
+- CRUD;
+- File I/O;
+- controle de fluxo;
+- tratamento de entrada;
+- organização de responsabilidades.
+
+## Executar
+
+Abra o projeto em um ambiente com Kotlin/JVM configurado e execute o arquivo <code>GerenciadorTarefas.kt</code>.
+
+O armazenamento local é criado e atualizado pela própria aplicação.
+
+## Objetivo
+
+Este repositório representa uma etapa de estudo dos fundamentos que sustentam projetos maiores de backend e automação.
+
+---
+
+<div align="center">
+
+Projeto de estudo · Cledson Santos
+
+</div>
