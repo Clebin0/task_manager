@@ -27,16 +27,20 @@ Projeto de estudo em Kotlin criado para consolidar fundamentos de backend, orien
 - classes e data classes;
 - encapsulamento;
 - CRUD;
-- File I/O;
+- SQL via JDBC;
 - controle de fluxo;
 - tratamento de entrada;
 - organização de responsabilidades.
 
 ## Executar
 
-Abra o projeto em um ambiente com Kotlin/JVM configurado e execute o arquivo <code>GerenciadorTarefas.kt</code>.
+Requisitos: JDK 21 e Gradle 8.14 ou superior.
 
-O armazenamento local é criado e atualizado pela própria aplicação.
+```bash
+gradle run
+```
+
+O Gradle instala o driver SQLite JDBC. A aplicação cria a tabela `Tarefas` automaticamente no arquivo local `banco_tarefas.db`.
 
 ## Objetivo
 
