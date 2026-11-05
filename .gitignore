@@ -16,3 +16,9 @@ build/
 # --- Logs e Erros ---
 *.log
 hs_err_pid*
+# Local databases and SQLite sidecar files
+*.db
+*.sqlite
+*.sqlite3
+*-wal
+*-shm
