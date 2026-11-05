@@ -34,13 +34,23 @@ Projeto de estudo em Kotlin criado para consolidar fundamentos de backend, orien
 
 ## Executar
 
-Requisitos: JDK 21 e Gradle 8.14 ou superior.
+Requisitos: JDK 21. O Gradle Wrapper 8.14 já está incluído.
 
-```bash
-gradle run
+Windows:
+
+```powershell
+.\gradlew.bat run
+.\gradlew.bat test
 ```
 
-O Gradle instala o driver SQLite JDBC. A aplicação cria a tabela `Tarefas` automaticamente no arquivo local `banco_tarefas.db`.
+Linux/macOS:
+
+```bash
+./gradlew run
+./gradlew test
+```
+
+A aplicação cria a tabela `Tarefas` no banco local `banco_tarefas.db`. O caminho pode ser alterado por `TASK_DATABASE_PATH` ou pela propriedade JVM `task.database.path`. O banco é local e está excluído do Git.
 
 ## Objetivo
 

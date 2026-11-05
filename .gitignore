@@ -2,6 +2,7 @@
 .idea/
 out/
 build/
+.gradle/
 *.iml
 *.iws
 *.ipr
@@ -9,6 +10,7 @@ build/
 # --- Arquivos Compilados (O "Lixo" gerado pelo Java/Kotlin) ---
 *.class
 *.jar
+!gradle/wrapper/gradle-wrapper.jar
 *.war
 *.zip
 *.rar
